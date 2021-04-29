@@ -3,17 +3,23 @@ require "vendor/autoload.php";
 require_once "credenciales.php";
 MercadoPago\SDK::setAccessToken($access_token);
 
+//Agregado de x-integration-id
+MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
+
 $ID = "1234";     //Así lo indica el examen
 $producto = $_POST["title"];
 $precio = $_POST["price"];
 $cantidad = 1;    //Así lo indica el examen
 $URL_imagen = urlencode($_POST["img"]);
 $Descripcion = '​Dispositivo móvil de Tienda e-commerce';
-$Nro_orden_pedido = "conect2000@hotmail.com";
 
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
 
+$preference->external_reference="conect2000@hotmail.com";
+$preference->auto_return = "approved";
+
+$preference->notification_url = "https://infotronico.com/certifmp/webhooks.php";
 //Medios de Pago
 /* El cliente quiere que los pagos con tarjeta de crédito se puedan pagar permitiendo como
     máximo ​6 cuotas ​(mensualidades). A su vez, no quiere permitir pagos con tarjetas
@@ -64,25 +70,21 @@ $payer->address = array(
 $preference->payer = $payer;
 
 $preference->back_urls = array(
-    "success" => "http://localhost:8080/feedback",
-    "failure" => "http://localhost:8080/feedback",
-    "pending" => "http://localhost:8080/feedback"
+    "success" => "https://infotronico.com/certifmp/order-complete.php",
+    "failure" => "https://infotronico.com/certifmp/order-error.php",
+    "pending" => "https://infotronico.com/certifmp/order-incomplete.php"
 );
 
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
-$item->id = $ID;
-$item->title = $producto;
-$item->quantity = $cantidad;
-$item->unit_price = $precio;
-$item->picture_url = $URL_imagen;
+    $item->id = $ID;
+    $item->title = $producto;
+    $item->quantity = $cantidad;
+    $item->unit_price = $precio;
+    $item->picture_url = $URL_imagen;
+
 $preference->items = array($item);
 $preference->save();
-
-$response = array(
-    'id' => $preference->id,
-);
-echo json_encode($response);
 
 ?>
 <!DOCTYPE html>
