@@ -27,7 +27,7 @@
       </div>
       <br>
       <div class="col s12 m7">
-        <h2 class="header">Horizontal Card</h2>
+        <h2 class="header">Datos recibidos</h2>
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
