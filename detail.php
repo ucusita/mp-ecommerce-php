@@ -111,6 +111,7 @@ $preference->save();
 
     <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
     </script>
+    <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
 
     <style>
         .as-filter-button-text {
