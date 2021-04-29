@@ -30,20 +30,11 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e3aedbfa369010f518359439ddcfb5c7c45a088c',
-    'name' => '__root__',
+    'reference' => '07b96201388dfe525423250d113c1d4e1440f7df',
+    'name' => 'ucusita/mp',
   ),
   'versions' => 
   array (
-    '__root__' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'e3aedbfa369010f518359439ddcfb5c7c45a088c',
-    ),
     'doctrine/annotations' => 
     array (
       'pretty_version' => '1.12.1',
@@ -133,6 +124,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '2ea4d51f6b29d568b3a06d430114467fc2ab6b90',
+    ),
+    'ucusita/mp' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '07b96201388dfe525423250d113c1d4e1440f7df',
     ),
   ),
 );
