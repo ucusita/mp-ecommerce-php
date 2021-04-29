@@ -1,5 +1,5 @@
 <?php
-	function generaLogsPay($accion)
+	function generaLogsMP($accion)
 	{   
 			$hora=str_pad(date("H:i:s"),10," "); //hhmmss;
 			$accion=str_pad($accion,50," ");

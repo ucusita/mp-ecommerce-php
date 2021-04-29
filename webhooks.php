@@ -1,6 +1,7 @@
 <?php	
 require "vendor/autoload.php";
 require_once "credenciales.php";
+require_once "registroLogsMP.php";
 MercadoPago\SDK::setAccessToken($access_token);
 
 generaLogsMP('======================================================================');

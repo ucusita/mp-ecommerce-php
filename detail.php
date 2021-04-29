@@ -634,9 +634,9 @@ $preference->save();
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <!-- <button type="submit" class="mercadopago-button" formmethod="post">Pagar la compra</button> -->
-
-                                    <a class="mercadopago-button" href="<?php echo $preference->init_point; ?>">Pagar la compra</a>
+                                    <form action="<?php echo $preference->init_point; ?>" class="inline">
+                                    <button class="mercadopago-button" formmethod="post">Pagar la compra</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
