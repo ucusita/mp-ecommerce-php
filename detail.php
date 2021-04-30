@@ -10,7 +10,8 @@ $ID = "1234";     //Así lo indica el examen
 $producto = $_POST["title"];
 $precio = $_POST["price"];
 $cantidad = 1;    //Así lo indica el examen
-$URL_imagen = urlencode($_POST["img"]);
+$rest = substr($_POST["img"], 1);
+$URL_imagen = "https://infotronico.com/certifmp".$rest;
 $Descripcion = '​Dispositivo móvil de Tienda e-commerce';
 
 // Crea un objeto de preferencia
@@ -79,11 +80,14 @@ $preference->back_urls = array(
 $item = new MercadoPago\Item();
     $item->id = $ID;
     $item->title = $producto;
+    $item->description = $Descripcion;
     $item->quantity = $cantidad;
     $item->unit_price = $precio;
     $item->picture_url = $URL_imagen;
 
 $preference->items = array($item);
+//echo $_POST["img"];
+//var_dump($preference);
 $preference->save();
 
 ?>

@@ -1,0 +1,122 @@
+{
+  "paging": { "total": 1, "limit": 30, "offset": 0 },
+  "results": [
+    {
+      "metadata": {},
+      "corporation_id": null,
+      "operation_type": "regular_payment",
+      "point_of_interaction": {},
+      "fee_details": [
+        { "amount": 652.5, "fee_payer": "collector", "type": "mercadopago_fee" }
+      ],
+      "notification_url": "https://infotronico.com/certifmp/webhooks.php",
+      "date_approved": "2021-04-29T19:24:36.000-04:00",
+      "money_release_schema": null,
+      "payer": {
+        "entity_type": null,
+        "identification": { "number": "32659430", "type": "DNI" },
+        "phone": { "number": "22223333", "extension": null, "area_code": "01" },
+        "operator_id": null,
+        "last_name": "Landa",
+        "id": "471923173",
+        "type": "guest",
+        "first_name": "Lalo",
+        "email": "test_user_63274575@testuser.com"
+      },
+      "transaction_details": {
+        "total_paid_amount": 9000,
+        "acquirer_reference": null,
+        "installment_amount": 9000,
+        "financial_institution": null,
+        "net_received_amount": 8347.5,
+        "overpaid_amount": 0,
+        "external_resource_url": null,
+        "payable_deferral_period": null,
+        "payment_method_reference_id": "1234567"
+      },
+      "statement_descriptor": "TETE2587273",
+      "call_for_authorize_id": null,
+      "installments": 1,
+      "pos_id": null,
+      "external_reference": "conect2000@hotmail.com",
+      "date_of_expiration": null,
+      "charges_details": [],
+      "id": 14656362376,
+      "payment_type_id": "credit_card",
+      "order": { "id": "2610766287", "type": "mercadopago" },
+      "counter_currency": null,
+      "brand_id": null,
+      "status_detail": "accredited",
+      "differential_pricing_id": null,
+      "additional_info": {
+        "ip_address": "186.153.69.153",
+        "nsu_processadora": null,
+        "available_balance": null,
+        "items": [
+          {
+            "quantity": "1",
+            "category_id": null,
+            "picture_url": ".%2Fassets%2Fmotorola-moto-g5-plus-1.jpg",
+            "description": null,
+            "id": "1234",
+            "title": "Motorola G5",
+            "unit_price": "9000.0"
+          }
+        ],
+        "payer": {
+          "address": {
+            "street_number": "123",
+            "street_name": "False",
+            "zip_code": "1111"
+          },
+          "phone": { "number": "22223333", "area_code": "11" },
+          "last_name": "Landa",
+          "first_name": "Lalo"
+        }
+      },
+      "live_mode": true,
+      "marketplace_owner": null,
+      "card": {
+        "first_six_digits": "450995",
+        "expiration_year": 2025,
+        "date_created": "2021-04-29T19:24:35.000-04:00",
+        "expiration_month": 11,
+        "id": null,
+        "cardholder": {
+          "identification": { "number": "12333223", "type": "DNI" },
+          "name": "APRO"
+        },
+        "last_four_digits": "3704",
+        "date_last_updated": "2021-04-29T19:24:35.000-04:00"
+      },
+      "integrator_id": "dev_24c65fb163bf11ea96500242ac130004",
+      "status": "approved",
+      "transaction_amount_refunded": 0,
+      "transaction_amount": 9000,
+      "description": "Motorola G5",
+      "money_release_date": "2021-04-29T19:24:36.000-04:00",
+      "merchant_number": null,
+      "refunds": [],
+      "authorization_code": "1234567",
+      "captured": true,
+      "collector_id": 469485398,
+      "merchant_account_id": null,
+      "taxes_amount": 0,
+      "date_last_updated": "2021-04-29T19:24:36.000-04:00",
+      "coupon_amount": 0,
+      "store_id": null,
+      "date_created": "2021-04-29T19:24:35.000-04:00",
+      "acquirer_reconciliation": [],
+      "sponsor_id": null,
+      "shipping_amount": 0,
+      "issuer_id": "310",
+      "payment_method_id": "visa",
+      "binary_mode": false,
+      "platform_id": null,
+      "deduction_schema": null,
+      "processing_mode": "aggregator",
+      "currency_id": "ARS",
+      "shipping_cost": 0
+    }
+  ]
+}
